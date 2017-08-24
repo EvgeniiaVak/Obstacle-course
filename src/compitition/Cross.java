@@ -6,7 +6,7 @@ public class Cross extends Obstance {
         this.lenght = lenght;
     }
     @Override
-    public void doIt(Animal a) {
-      a.run(this.lenght);
+    public void doIt(Team team) {
+        team.run(this.lenght);
     }
 }

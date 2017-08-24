@@ -1,18 +1,13 @@
 package compitition;
 
-public class Course extends Team{// как передать team.length без наследования?
+public class Course{
     Obstance cr[];
     public Course (){
-        //super(); не хочет писаться nameOfTeam и team[] почему?
-        cr = new Obstance[] {new Cross ( 500 ), new Wall ( 2 ), new Water ( 5 ), new Cross ( 800 ) };
+        cr = new Obstance[] {new Cross ( 500 ), new Wall ( 2 ), new Water ( 5 ) };
     }
-
-    public void doIt(){
-        for (int i = 0; i < team.length; i++){//java.lang.NullPointerException почему?
-            for (int j = 0; j<cr.length; j++){
-                cr[j].doIt ( team[i] );
-                if(!team[i].onDistance) break;
-            }
+    public void doIt(Team team){
+        for (int i = 0; i < cr.length; i++ ){
+            cr[i].doIt ( team );
         }
     }
 }

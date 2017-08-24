@@ -6,7 +6,7 @@ public class Water extends Obstance {
         this.length=length;
     }
     @Override
-    public void doIt(Animal a) {
-        a.swim(this.length);
+    public void doIt(Team team) {
+        team.swim(this.length);
     }
 }

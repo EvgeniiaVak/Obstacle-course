@@ -6,7 +6,7 @@ public class Wall extends Obstance {
         this.height = height;
     }
     @Override
-    public void doIt(Animal a) {
-        a.jump(this.height);
+    public void doIt(Team team) {
+        team.jump(this.height);
     }
 }
